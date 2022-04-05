@@ -16,19 +16,16 @@ class RangeInput extends React.Component {
           <div className="two fields">
             <div className='field'>
               <label>Minimun Range(Km)</label>
-              <input 
-              type="number"
+              <input type="number"
               onChange={e=>this.setState({minKm:e.target.value, maxKm:this.state.maxKm})}
-              placeholder="Example: 1"
+              placeholder="Example: 1" required
               />
             </div>
             <div className='field'>
               <label>Maximun Range(Km)</label>
-              <input 
-              type="number" 
-              value={this.state.maxKm}
+              <input type="number" value={this.state.maxKm}
               onChange={e=>this.setState({minKm:this.state.minKm, maxKm:e.target.value})}
-              placeholder="Example: 200"
+              placeholder="Example: 200" required
               />
             </div>
           </div>
